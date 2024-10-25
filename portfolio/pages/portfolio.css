@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    background-color: #000;
+}
+
+.sidebar h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.sidebar p {
+    font-size: 1.3rem;
+    line-height: 2;
+    margin-bottom: 10px;
+}
+
+.sidebar .links a {
+    display: block;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.sidebar .links a:hover {
+    color: #aaa;
+}
+
+.sidebar .socials {
+    margin-top: 20px;
+}
+
+.sidebar .socials a {
+    display: inline-block;
+    margin-right: 15px;
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.sidebar .socials a:hover {
+    color: #aaa;
+}
+
+.content {
+    position: fixed;
+    top: 8px;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+
+.vertical-nav a {
+    font-size: 6rem;
+    letter-spacing: 5px;
+    color: transparent;
+    text-decoration: none;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    -webkit-text-stroke: 3px white;
+    transition: all 0.3s ease;
+    position: relative;
+    top: 27px;
+    animation: slide-in 1.5s;
+}
+
+.vertical-nav a:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: rotate(180deg) translateY(40px);
+}
+
+@keyframes slide-in {
+    0% {
+        transform: rotate(180deg) translateY(-100vh);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(180deg) translateY(0vh);
+        opacity: 1;
+    }
+}
